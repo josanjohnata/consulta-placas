@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Veículos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Consulta de Veículos</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#video">Vídeo</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre o Sistema</h2>
+        <p>Nosso sistema de consulta de veículos permite que você obtenha informações detalhadas sobre qualquer veículo de forma rápida e fácil.</p>
+    </section>
+
+    <section id="video">
+        <h2>Vídeo Explicativo</h2>
+        <video controls>
+            <source src="video-explicativo.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+        <button class="consulta-btn" onclick="window.open('https://wa.me/5585989141339', '_blank')">Consulta de Placas</button>
+    </section>
+
+    <section id="planos">
+        <h2>Planos de Pagamento</h2>
+        <div class="planos">
+            <div class="plano">
+                <h3>Básico</h3>
+                <p>R$ 15,90/mês</p>
+                <p>10 consultas completa de veículos com histórico.</p>
+            </div>
+            <div class="plano">
+                <h3>Intermediário</h3>
+                <p>R$ 39,90/mês</p>
+                <p>25 consulta completa de veículos com histórico.</p>
+            </div>
+            <div class="plano">
+                <h3>Premium</h3>
+                <p>R$ 79,90/mês</p>
+                <p>50 consultas completa de veículos com histórico.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <div class="contatos">
+            <div class="contato-item">
+                <img src="./whatsapp.png" class="material-icons" />
+                <p>(11) 91234-5678</p>
+            </div>
+            <div class="contato-item">
+                <span class="material-icons">telegram</span>
+                <p>@consulta_veiculos</p>
+            </div>
+            <div class="contato-item">
+                <span class="material-icons">email</span>
+                <p>contato@consultaveiculos.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="ano-atual"></span> Consulta de Veículos. Todos os direitos reservados.</p>
+        <script>
+            document.getElementById('ano-atual').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
