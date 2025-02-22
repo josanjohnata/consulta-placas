@@ -10,21 +10,36 @@
 </head>
 <body>
     <header>
-        <h1>C PlacasBot</h1>
         <nav>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#video">Vídeo</a></li>
                 <li><a href="#planos">Planos</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li class="mobile-only">
+                    <button class="consulta-btn-menu" onclick="window.open('https://wa.me/5585989141339', '_blank')">
+                        <img src="./login-icon.svg" class="img-button" />
+                        Consulta de Placas
+                    </button>
+                </li>
             </ul>
+            <img src="./icon.png" alt="Logo" />
+            <button class="consulta-btn-header desktop-only" onclick="window.open('https://wa.me/5585989141339', '_blank')">
+                <img src="./login-icon.svg" class="img-button" />
+                Consulta de Placas
+            </button>
         </nav>
     </header>
 
     <section>
         <div id="sobre">
             <div class="sobre-texto">
-                <h2 class="title-sobre">Pesando em comprar um veículo seminovo?</h2>
+                <h2 class="title-sobre">Pensando em comprar um veículo seminovo?</h2>
                 <p>
                     Nosso serviço de consulta de veiculares oferece uma pesquisa completa e confiável, 
                     permitindo que você conheça a situação financeira do veículo antes de compra-lo. 
@@ -45,47 +60,42 @@
             <source src="video-explicativo.mp4" type="video/mp4">
             Seu navegador não suporta a tag de vídeo.
         </video>
-        <a class="consulta-btn" onclick="window.open('https://wa.me/5585989141339', '_blank')">
-            <img src="./login-icon.svg" style="width: 28px; height: 28px; object-fit: cover;">
-            Consulta de Placas
-        </a>
     </section>
 
-    <section id="planos">
+    <section id="planos-section">
         <h2>Planos de Pagamento</h2>
         <div class="planos">
             <div class="plano">
-                <h3>Básico</h3>
-                <p>R$ 15,90/mês</p>
-                <p>10 consultas completa de veículos com histórico.</p>
+                <h3>Consulta Simples</h3>
+                <p>GRÁTIS</p>
+                <p>Consultas simples de veículo sem histórico.</p>
             </div>
             <div class="plano">
-                <h3>Intermediário</h3>
-                <p>R$ 39,90/mês</p>
-                <p>25 consulta completa de veículos com histórico.</p>
-            </div>
-            <div class="plano">
-                <h3>Premium</h3>
-                <p>R$ 79,90/mês</p>
-                <p>50 consultas completa de veículos com histórico.</p>
+                <h3>Consulta completa</h3>
+                <p>R$ 1,58</p>
+                <p>Por menos de 2 reais você fará a consulta completa de veículo com histórico.</p>
             </div>
         </div>
+        <button class="consulta-btn" onclick="window.open('https://wa.me/5585989141339', '_blank')">
+            <img src="./login-icon-2.svg" class="img-button" />
+            Consulta de Placas
+        </button>
     </section>
 
     <section id="contato">
-        <h2>Contato</h2>
+        <h2>Contatos</h2>
         <div class="contatos">
             <div class="contato-item">
                 <img src="./whatsapp.png" class="material-icons" />
-                <p>(11) 91234-5678</p>
+                <p>(85) 98402-3820</p>
             </div>
             <div class="contato-item">
                 <span class="material-icons">telegram</span>
-                <p>@consulta_veiculos</p>
+                <p>@CVidalMO</p>
             </div>
             <div class="contato-item">
                 <span class="material-icons">email</span>
-                <p>contato@consultaveiculos.com</p>
+                <p>cplacasbot@gmail.com</p>
             </div>
         </div>
     </section>
@@ -98,5 +108,22 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.hamburger-menu');
+            const nav = document.querySelector('nav ul');
+            menu.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.querySelector('.hamburger-menu');
+                const nav = document.querySelector('nav ul');
+                menu.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
