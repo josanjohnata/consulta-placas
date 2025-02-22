@@ -2,29 +2,68 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
+  width: 100%;
+  overflow-x: hidden;
 }
 
 header {
+  display: flex;
+  align-items: center;
   background-color: #31305A;
   color: #fff;
   padding: 1rem;
-  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-nav ul {
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 0 1rem;
+}
+
+header img {
+  height: 150px;
+  width: 150px;
+}
+
+header ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  order: 1;
 }
 
-nav ul li {
+header ul li {
   display: inline;
   margin: 0 1rem;
 }
 
-nav ul li a {
+header ul li a {
   color: #fff;
   text-decoration: none;
+}
+
+header .consulta-btn-header {
+  order: 3;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
 }
 
 .title-sobre {
@@ -37,7 +76,7 @@ nav ul li a {
 #sobre {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 2rem;
   text-align: left;
@@ -56,7 +95,49 @@ nav ul li a {
   font-weight: 500;
 }
 
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    padding: 1rem 0;
+    justify-content: space-around;
+  }
+
+  header nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  header ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #31305A;
+  }
+
+  header ul li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .hamburger-menu.active + ul {
+    display: flex;
+  }
+
   #sobre {
     flex-direction: column;
     text-align: center;
@@ -67,6 +148,26 @@ nav ul li a {
   }
   .sobre-imagem img {
     max-width: 80%;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  button {
+    padding: 5px 20px;
+    font-size: 10px;
+  }
+
+  .img-button {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -83,11 +184,52 @@ nav ul li a {
 .plano {
   border: 1px solid #ccc;
   padding: 1rem;
-  width: 30%;
+  margin-bottom: 3rem;
+  width: 45%;
+}
+
+.consulta-btn-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 7px 30px;
+  background-color: #80B049;
+  color: #FFF;
+  border: none;
+  border: 2px solid #3B3B3B;
+  border-radius: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 200;
+  gap: 10px;
+}
+
+.consulta-btn-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 7px 30px;
+  background-color: #80B049;
+  color: #FFF;
+  border: none;
+  border: 2px solid #3B3B3B;
+  border-radius: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 200;
+  gap: 10px;
 }
 
 .consulta-btn {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1rem auto;
   padding: 7px 30px;
   background-color: #3B5384;
@@ -100,8 +242,44 @@ nav ul li a {
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: 200;
-  align-items: center;
   gap: 10px;
+}
+
+.img-button {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .contatos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contato-item {
+    margin-bottom: 1rem;
+  }
+
+  button {
+    padding: 5px 20px;
+    font-size: 10px;
+  }
+
+  .img-button {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+#planos-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+#contato {
+  padding: 2rem;
+  text-align: center;
 }
 
 .contatos {
@@ -127,6 +305,4 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1rem;
-  width: 100%;
-  bottom: 0;
 }
