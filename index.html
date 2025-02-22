@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta de Veículos</title>
+    <title>C PlacasBot</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./icon.png">
 </head>
 <body>
     <header>
-        <h1>Consulta de Veículos</h1>
+        <h1>C PlacasBot</h1>
         <nav>
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
@@ -20,18 +21,34 @@
         </nav>
     </header>
 
-    <section id="sobre">
-        <h2>Sobre o Sistema</h2>
-        <p>Nosso sistema de consulta de veículos permite que você obtenha informações detalhadas sobre qualquer veículo de forma rápida e fácil.</p>
+    <section>
+        <div id="sobre">
+            <div class="sobre-texto">
+                <h2 class="title-sobre">Pesando em comprar um veículo seminovo?</h2>
+                <p>
+                    Nosso serviço de consulta de veiculares oferece uma pesquisa completa e confiável, 
+                    permitindo que você conheça a situação financeira do veículo antes de compra-lo. 
+                    Com apenas alguns cliques, você terá acesso a informações sobre multas, IPVA, 
+                    licenciamento e muito mais. Garanta sua segurança ao adquirir um veículo usado 
+                    e evite surpresas desagradáveis. Conte com nossa ajuda para fazer a melhor escolha!
+                </p>
+            </div>
+            <div class="sobre-imagem">
+                <img src="./Banner-carro.webp" alt="Banner carro" />
+            </div>
+        </div>
     </section>
 
     <section id="video">
-        <h2>Vídeo Explicativo</h2>
+        <h2>Como consultar placas?</h2>
         <video controls>
             <source src="video-explicativo.mp4" type="video/mp4">
             Seu navegador não suporta a tag de vídeo.
         </video>
-        <button class="consulta-btn" onclick="window.open('https://wa.me/5585989141339', '_blank')">Consulta de Placas</button>
+        <a class="consulta-btn" onclick="window.open('https://wa.me/5585989141339', '_blank')">
+            <img src="./login-icon.svg" style="width: 28px; height: 28px; object-fit: cover;">
+            Consulta de Placas
+        </a>
     </section>
 
     <section id="planos">

@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: #31305A;
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -27,7 +27,50 @@ nav ul li a {
   text-decoration: none;
 }
 
-section {
+.title-sobre {
+  font-size: 50px;
+  color: #31305A;
+  font-weight: bold;
+  line-height: 58px;
+}
+
+#sobre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  text-align: left;
+}
+
+#sobre .sobre-imagem img {
+  max-width: 70%;
+  height: auto;
+}
+
+#sobre .sobre-texto {
+  max-width: 50%;
+  color: #2B2B2B;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  #sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #sobre .sobre-imagem img, #sobre .sobre-texto {
+    max-width: 100%;
+  }
+  .sobre-imagem img {
+    max-width: 80%;
+  }
+}
+
+#video {
   padding: 2rem;
   text-align: center;
 }
@@ -46,11 +89,19 @@ section {
 .consulta-btn {
   display: block;
   margin: 1rem auto;
-  padding: 0.5rem 2rem;
-  background-color: #333;
-  color: #fff;
+  padding: 7px 30px;
+  background-color: #3B5384;
+  color: #FFF;
   border: none;
+  border: 2px solid #3B3B3B;
+  border-radius: 16px;
   cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 200;
+  align-items: center;
+  gap: 10px;
 }
 
 .contatos {
