@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   width: 100%;
   overflow-x: hidden;
 }
@@ -79,12 +79,13 @@ header .consulta-btn-header {
   justify-content: space-around;
   align-items: center;
   padding: 2rem;
-  text-align: left;
+  text-align: center;
 }
 
 #sobre .sobre-imagem img {
   max-width: 70%;
   height: auto;
+  text-align: center !important;
 }
 
 #sobre .sobre-texto {
@@ -93,6 +94,7 @@ header .consulta-btn-header {
   font-size: 18px;
   line-height: 32px;
   font-weight: 500;
+  text-align: left;
 }
 
 .desktop-only {
