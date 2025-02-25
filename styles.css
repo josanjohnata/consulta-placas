@@ -22,7 +22,7 @@ header nav {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin: 0 1rem;
+  /* margin: 0 1rem; */
 }
 
 header img {
@@ -31,12 +31,9 @@ header img {
 }
 
 header ul {
-  list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-grow: 1;
-  order: 1;
 }
 
 header ul li {
@@ -47,10 +44,6 @@ header ul li {
 header ul li a {
   color: #fff;
   text-decoration: none;
-}
-
-header .consulta-btn-header {
-  order: 3;
 }
 
 .hamburger-menu {
@@ -277,6 +270,60 @@ header .consulta-btn-header {
 #planos-section {
   padding: 2rem;
   text-align: center;
+}
+
+#planos-section .consulta-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 7px 30px;
+  background-color: #3B5384;
+  color: #FFF;
+  border: none;
+  border: 2px solid #3B3B3B;
+  border-radius: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 200;
+  gap: 10px;
+}
+
+#planos-section .consulta-btn .img-button,
+#planos-section .consulta-btn .material-icons {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+}
+
+#planos-section .consulta-btn .material-icons {
+  color: #000;
+}
+
+#planos-section .consulta-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  #planos-section .consulta-btn-container {
+    flex-direction: column;
+  }
+
+  #planos-section .consulta-btn {
+    padding: 5px 20px;
+    font-size: 10px;
+  }
+
+  #planos-section .consulta-btn .img-button,
+  #planos-section .consulta-btn .material-icons {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 #contato {

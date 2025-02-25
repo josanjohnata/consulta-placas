@@ -11,6 +11,7 @@
 <body>
     <header>
         <nav>
+            <img src="./icon.png" alt="Logo" />
             <div class="hamburger-menu" onclick="toggleMenu()">
                 <div></div>
                 <div></div>
@@ -21,41 +22,32 @@
                 <li><a href="#video">Vídeo</a></li>
                 <li><a href="#planos">Planos</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li class="mobile-only">
-                    <button class="consulta-btn-menu" onclick="window.open('https://wa.me/5585989141339', '_blank')">
-                        <img src="./login-icon.svg" class="img-button" />
-                        Consulta de Placas
-                    </button>
-                </li>
+                <li><a href="#consulta">Fazer Consulta</a></li>
             </ul>
-            <img src="./icon.png" alt="Logo" />
-            <button class="consulta-btn-header desktop-only" onclick="window.open('https://wa.me/5585989141339', '_blank')">
-                <img src="./login-icon.svg" class="img-button" />
-                Consulta de Placas
-            </button>
         </nav>
     </header>
 
     <section>
         <div id="sobre">
             <div class="sobre-texto">
-                <h2 class="title-sobre">Pensando em comprar um veículo seminovo?</h2>
+                <h2 class="title-sobre">Consulta de veículos para Operadores de Guincho</h2>
                 <p>
-                    Nosso serviço de consulta de veiculares oferece uma pesquisa completa e confiável, 
-                    permitindo que você conheça a situação financeira do veículo antes de compra-lo. 
-                    Com apenas alguns cliques, você terá acesso a informações sobre multas, IPVA, 
-                    licenciamento e muito mais. Garanta sua segurança ao adquirir um veículo usado 
-                    e evite surpresas desagradáveis. Conte com nossa ajuda para fazer a melhor escolha!
+                    Com nosso serviço de consulta veicular, operadores de guincho e empresas do 
+                    ramo garantem a segurança e a conformidade legal de seus serviços. Em poucos 
+                    cliques, acesse informações completas e confiáveis sobre a situação legal de 
+                    qualquer veículo antes do reboque, incluindo multas, roubo/furto, licenciamento 
+                    e muito mais. 
+                    Tome decisões informadas e evite problemas com nossa pesquisa rápida e eficiente.
                 </p>
             </div>
             <div class="sobre-imagem">
-                <img src="./Banner-carro.webp" alt="Banner carro" />
+                <img src="./guincho.png" alt="Banner guincho" />
             </div>
         </div>
     </section>
 
     <section id="video">
-        <h2>Como consultar placas?</h2>
+        <h2>Como utilizar nosso serviço?</h2>
         <video controls>
             <source src="video-explicativo.mp4" type="video/mp4">
             Seu navegador não suporta a tag de vídeo.
@@ -72,14 +64,20 @@
             </div>
             <div class="plano">
                 <h3>Consulta completa</h3>
-                <p>R$ 1,58</p>
+                <p>R$ 1,98</p>
                 <p>Por menos de 2 reais você fará a consulta completa de veículo com histórico.</p>
             </div>
         </div>
-        <button class="consulta-btn" onclick="window.open('https://wa.me/5585989141339', '_blank')">
-            <img src="./login-icon-2.svg" class="img-button" />
-            Consulta de Placas
-        </button>
+        <div class="consulta-btn-container">
+            <button id="consulta" class="consulta-btn" onclick="window.open('https://wa.me/5585989141339', '_blank')">
+                <img src="./whatsapp.png" class="img-button" />
+                Consulta de Placas
+            </button>
+            <button id="consulta" class="consulta-btn" onclick="window.open('@CPlacasBot', '_blank')">
+                <span class="material-icons">telegram</span>
+                Consulta de Placas
+            </button>
+        </div>
     </section>
 
     <section id="contato">
@@ -91,7 +89,7 @@
             </div>
             <div class="contato-item">
                 <span class="material-icons">telegram</span>
-                <p>@CVidalMO</p>
+                <p>@CPlacasBot</p>
             </div>
             <div class="contato-item">
                 <span class="material-icons">email</span>
