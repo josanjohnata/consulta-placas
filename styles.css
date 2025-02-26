@@ -59,6 +59,16 @@ header ul li a {
   margin: 4px 0;
 }
 
+.close-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.close-menu .material-icons {
+  font-size: 28px;
+  color: #fff;
+}
+
 .title-sobre {
   font-size: 50px;
   color: #31305A;
@@ -120,6 +130,10 @@ header ul li a {
     background-color: #31305A;
   }
 
+  header ul.active {
+    display: flex;
+  }
+
   header ul li {
     margin: 1rem 0;
     text-align: center;
@@ -129,8 +143,23 @@ header ul li a {
     display: flex;
   }
 
+  .hamburger-menu.active {
+    display: none;
+  }
+
   .hamburger-menu.active + ul {
     display: flex;
+  }
+
+  .close-menu {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .close-menu.active {
+    display: block;
   }
 
   #sobre {

@@ -24,6 +24,9 @@
                 <li><a href="#contato">Contato</a></li>
                 <li><a href="#consulta">Fazer Consulta</a></li>
             </ul>
+            <div class="close-menu" onclick="toggleMenu()">
+                <span class="material-icons">close</span>
+            </div>
         </nav>
     </header>
 
@@ -109,17 +112,32 @@
         function toggleMenu() {
             const menu = document.querySelector('.hamburger-menu');
             const nav = document.querySelector('nav ul');
+            const closeMenu = document.querySelector('.close-menu');
             menu.classList.toggle('active');
             nav.classList.toggle('active');
+            closeMenu.classList.toggle('active');
         }
 
         document.querySelectorAll('nav ul li a').forEach(link => {
             link.addEventListener('click', () => {
                 const menu = document.querySelector('.hamburger-menu');
                 const nav = document.querySelector('nav ul');
+                const closeMenu = document.querySelector('.close-menu');
                 menu.classList.remove('active');
                 nav.classList.remove('active');
+                closeMenu.classList.remove('active');
             });
+        });
+
+        document.addEventListener('click', (event) => {
+            const menu = document.querySelector('.hamburger-menu');
+            const nav = document.querySelector('nav ul');
+            const closeMenu = document.querySelector('.close-menu');
+            if (!menu.contains(event.target) && !nav.contains(event.target) && !closeMenu.contains(event.target)) {
+                menu.classList.remove('active');
+                nav.classList.remove('active');
+                closeMenu.classList.remove('active');
+            }
         });
     </script>
 </body>
