@@ -195,6 +195,74 @@ header ul li a {
   }
 }
 
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  
+  header img {
+    height: auto;
+    width: 80%;
+    max-width: 200px;
+    margin-bottom: 0.5rem;
+  }
+  
+  header nav {
+    flex-direction: column;
+  }
+  
+  header ul {
+    position: static;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  header ul li {
+    margin: 0.5rem 0;
+  }
+  
+  .hamburger-menu, .close-menu {
+    position: static;
+    margin: 0.5rem auto;
+  }
+  
+  #sobre {
+    padding: 1rem;
+  }
+  
+  #sobre .sobre-texto, #sobre .sobre-imagem img, #video, .video {
+    max-width: 100%;
+  }
+  
+  #video, #planos-section, #contato {
+    padding: 1rem;
+  }
+  
+  .consulta-btn,
+  .consulta-btn-header,
+  .consulta-btn-menu {
+    padding: 5px 15px;
+    font-size: 12px;
+  }
+
+  #planos-section .consulta-btn,
+  .consulta-btn,
+  .consulta-btn-header,
+  .consulta-btn-menu {
+    padding: 3px 10px;
+    font-size: 8px;
+  }
+  
+  #planos-section .consulta-btn .img-button,
+  #planos-section .consulta-btn .material-icons,
+  .img-button,
+  .material-icons {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 #video {
   padding: 2rem;
   text-align: center;
